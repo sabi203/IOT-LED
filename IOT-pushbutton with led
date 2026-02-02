@@ -1,18 +1,18 @@
 void setup(){
  serial.begin(115200);
- pinmode (19,OUTPUT);
  pinmode (5,OUTPUT);
- pinmode (34,INPUT);
+ pinmode (17,OUTPUT);
+ pinmode (33,INPUT);
 }
 void loop(){
- if(digitalread(34)==HIGH)
+ if(digitalread(33)==HIGH)
 {
- digitalwrite(19,HIGH);
- digitalwrite(5,LOW);
+ digitalwrite(5,HIGH);
+ digitalwrite(17,LOW);
 }
 else
 {
-  digitalwrite(19,LOW);
-  digitalwrite(5,HIGH);
+  digitalwrite(5,LOW);
+  digitalwrite(17,HIGH);
 }
 }
